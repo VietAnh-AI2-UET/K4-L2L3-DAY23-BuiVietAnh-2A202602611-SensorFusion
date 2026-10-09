@@ -8,7 +8,7 @@
 - MSSV: 2A202602611
 - Email: 26ai.anhbv@vinuni.edu.vn
 - Link repo (fork): `https://github.com/VietAnh-AI2-UET/K4-L2L3-DAY23-BuiVietAnh-2A202602611-SensorFusion`
-- Commit hash nộp (`git rev-parse HEAD`): `not-yet`
+- Commit hash nộp (`git rev-parse HEAD`): `7135d60aa5c398c4b7e5b3c6eed0d51e00fc64b0`
 
 ## Tóm tắt kết quả
 
@@ -103,5 +103,5 @@ Liệt kê phần bonus đã làm, file bằng chứng trong `student/bonus/` v�
 - [X] Đã commit `student/artifacts/metrics*.json` và `student/artifacts/grade_run*.log` (không sửa tay)
 - [X] Đã điền đủ file này, gồm khai báo AI
 - [X] Không commit dữ liệu Waymo, weights, `paths.yaml`, API key
-- [ ] `python tools/check_submission.py` báo `KẾT QUẢ: SẴN SÀNG NỘP`
-- [ ] Đã push và nộp link repo + commit hash trên LMS ([hướng dẫn nộp](../SUBMISSION.md))
+- [X] `python tools/check_submission.py` báo `KẾT QUẢ: SẴN SÀNG NỘP`
+- [X] Đã push và nộp link repo + commit hash trên LMS ([hướng dẫn nộp](../SUBMISSION.md))
