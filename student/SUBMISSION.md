@@ -7,16 +7,39 @@
 - Họ tên: Bùi Việt Anh
 - MSSV: 2A202602611
 - Email: 26ai.anhbv@vinuni.edu.vn
-- Link repo (fork): https://github.com/VietAnh-AI2-UET/K4-L2L3-DAY23-BuiVietAnh-2A202602611-SensorFusion
-- Commit hash nộp (`git rev-parse HEAD`):
+- Link repo (fork): `https://github.com/VietAnh-AI2-UET/K4-L2L3-DAY23-BuiVietAnh-2A202602611-SensorFusion`
+- Commit hash nộp (`git rev-parse HEAD`): `not-yet`
 
 ## Tóm tắt kết quả
 
-- `fusion_mode` (bắt buộc `compare`), `frames`, `segment`, `seed`: `compare`
-- `detection.precision`, `detection.recall`, `detection.tp/fp/fn`:
-- `tracking.lidar.rmse`, `matches`, `sum_sq_err`, `ghost_track_frames`, `missed_gt_frames`, `mean_confirmed_tracks`:
-- `tracking.fused.rmse`, `matches`, `sum_sq_err`, `ghost_track_frames`, `missed_gt_frames`, `mean_confirmed_tracks`:
-- Giải thích khác biệt hai mode, đọc RMSE cùng số ghép và ghost/miss:
+- `fusion_mode` (bắt buộc `compare`), `frames`, `segment`, `seed`: 
+   - `compare`, 
+   - `[0, 198]`,
+   - `training_segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord`,
+   - `0`.
+- `detection.precision`, `detection.recall`, `detection.tp/fp/fn`: 
+   - `0.9700934579439252`, 
+   - `0.7004048582995951`,
+   - `519/16/222`.
+- `tracking.lidar.rmse`, `matches`, `sum_sq_err`, `ghost_track_frames`, `missed_gt_frames`, `mean_confirmed_tracks`: 
+   - `0.15032268781360134` m, 
+   - `502`, 
+   - `11.343649056695735` m², 
+   - `0`, 
+   - `239`, 
+   - `2.522613065326633`.
+- `tracking.fused.rmse`, `matches`, `sum_sq_err`, `ghost_track_frames`, `missed_gt_frames`, `mean_confirmed_tracks`: 
+   - `0.1358667883353908` m, 
+   - `502`, 
+   - `9.26681165463209` m², 
+   - `0`, 
+   - `239`, 
+   - `2.522613065326633`.
+- Giải thích khác biệt hai mode, đọc RMSE cùng số ghép và ghost/miss: 
+   - Kết hợp lidar và camera giảm RMSE từ 15.03 cm xuống 13.59 cm. 
+   - Cả hai mode có 502 lần ghép track với xe thật
+   - 239 lượt xe thật chưa được track theo dõi. 
+   - Camera giúp định vị chính xác hơn nhưng chưa cải thiện số lượt theo dõi được hay bỏ sót. Các số đếm được cộng qua từng frame, không phải số xe riêng biệt; RMSE chỉ tính trên các cặp ghép được.
 
 Chạy từ root repo:
 
@@ -61,7 +84,7 @@ Liệt kê phần bonus đã làm, file bằng chứng trong `student/bonus/` v�
 
 ## Khai báo sử dụng AI (bắt buộc)
 
-Ghi rõ, kể cả khi không dùng ("Không dùng AI"). Xem [RULES.md](../RULES.md) mục 2.
+- Công cụ đã dùng (ChatGPT, Copilot, Claude, …): Codex
 
 | Công cụ | Dùng cho việc gì | Bạn đã kiểm chứng thế nào |
 |---|---|---|
